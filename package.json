@@ -1,0 +1,15 @@
+{
+  "name": "imagesearchabstraction",
+  "version": "1.0.0",
+  "description": "get image json data from imgur",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodeserver.js"
+  },
+  "author": "phantomofthetollbooth",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "request": "^2.72.0"
+  }
+}
