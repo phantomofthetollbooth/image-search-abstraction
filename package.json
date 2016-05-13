@@ -4,12 +4,14 @@
   "description": "get image json data from imgur",
   "main": "index.js",
   "scripts": {
-    "start": "nodeserver.js"
+    "start": "node server.js"
   },
   "author": "phantomofthetollbooth",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^2.0.0",
     "express": "^4.13.4",
+    "mongodb": "^2.1.18",
     "request": "^2.72.0"
   }
 }
