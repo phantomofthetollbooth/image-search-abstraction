@@ -23,8 +23,6 @@ var getImgur = function(req,res){
         'Authorization': "Client-Id 47640773803e259"
       }
     }
-}	
-
 request(requestOptions, function (error, response, body) {
   if (error) {
 	  console.log(error)
@@ -32,6 +30,9 @@ request(requestOptions, function (error, response, body) {
       res.json(JSON.parse(body).data); 
   }
 })
+}	
+
+
 
 /*searches.insert({query: req.params.query, time: Date.now()}, function(err, result) {
       if (err) {throw err};
