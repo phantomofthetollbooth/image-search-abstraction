@@ -27,25 +27,32 @@ request(requestOptions, function (error, response, body) {
   if (error) {
 	  console.log(error)
   }else{
-     //res.json(JSON.parse(body).data); 
 	 res.json(JSON.parse(body).data);
 	
   }
 })
+
+searches.save({query: req.params.query, time: Date.now()}, function(err, result) {
+      if (err) {throw err};
+      console.log("Saved"+result);
+    });
 }	
 
 
 
-/*searches.insert({query: req.params.query, time: Date.now()}, function(err, result) {
-      if (err) {throw err};
-      return;
-    });*/
+
 
 
 
 
 function getLatest(app,db){
-	
+ //searches.find().sort({_id: -1}).limit(10).toArray(function(err, docs){
+searches.find().toArray(function(err, docs){ 
+ if (err) {
+        console.log(err);
+      }
+      res.json(docs);
+    })	
 	
 }
 
