@@ -29,7 +29,7 @@ request(getImgur, function (error, response, body) {
   if (error) {
 	  console.log(error)
   }else{
-    console.log(body)  
+      res.json(JSON.parse(body).data); 
   }
 })
 
