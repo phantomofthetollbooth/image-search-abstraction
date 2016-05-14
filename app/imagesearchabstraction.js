@@ -8,8 +8,6 @@ app.get('/search/:query*',getImgur);
 
 app.get('/latest', getLatest);
 
-
-
 function getImgur(req,res){
 	  var queryUrl = "https://api.imgur.com/3/gallery/search/time";
     if (req.query.offset){
@@ -38,15 +36,7 @@ searches.save({query: req.params.query, time: Date.now()}, function(err, result)
     });
 }	
 
-
-
-
-
-
-
-
 function getLatest(req,res){
- //searches.find().sort({_id: -1}).limit(10).toArray(function(err, docs){
 searches.find().sort({time:-1}).limit(15).toArray(function(err, docs){ 
  if (err) {
         console.log(err);
@@ -55,14 +45,5 @@ searches.find().sort({time:-1}).limit(15).toArray(function(err, docs){
     })	
 	
 }
-
-
-
-
-
-
-
-
-
 
 }
