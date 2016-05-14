@@ -4,7 +4,7 @@ var searches = db.collection('searches');
 
 var request = require('request');
 
-app.get('/:query*',search);
+app.get('search/:query*',search);
 
 app.get('/latest', getLatest);
 
@@ -20,7 +20,7 @@ var getImgur = function(req,res){
     var requestOptions = {
       url: queryUrl,
       headers: {
-        'Authorization': "Client-Id 0c00d9b275bfd72"
+        'Authorization': "Client-Id 47640773803e259"
       }
     }
 }	
