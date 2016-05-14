@@ -25,7 +25,7 @@ var getImgur = function(req,res){
     }
 }	
 
-request(getImgur, function (error, response, body) {
+request(requestOptions, function (error, response, body) {
   if (error) {
 	  console.log(error)
   }else{
