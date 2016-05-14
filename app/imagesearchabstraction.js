@@ -4,7 +4,7 @@ var searches = db.collection('searches');
 
 var request = require('request');
 
-app.get('search/:query*',search);
+app.get('/search/:query*',search);
 
 app.get('/latest', getLatest);
 
