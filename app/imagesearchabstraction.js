@@ -28,7 +28,7 @@ request(requestOptions, function (error, response, body) {
 	  console.log(error)
   }else{
      //res.json(JSON.parse(body).data); 
-	 res.send(JSON.parse(body).data);
+	 res.json(JSON.parse(body).data);
 	
   }
 })
