@@ -45,7 +45,7 @@ searches.save({query: req.params.query, time: Date.now()}, function(err, result)
 
 
 
-function getLatest(app,db){
+function getLatest(req,res){
  //searches.find().sort({_id: -1}).limit(10).toArray(function(err, docs){
 searches.find().toArray(function(err, docs){ 
  if (err) {
