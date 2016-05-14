@@ -4,11 +4,11 @@ var searches = db.collection('searches');
 
 var request = require('request');
 
-app.get('/search/:query*',search);
+app.get('/search/:query*',getImgur);
 
 app.get('/latest', getLatest);
 
-function search(app,db){
+
 
 var getImgur = function(req,res){
 	  var queryUrl = "https://api.imgur.com/3/gallery/search/time";
@@ -41,7 +41,7 @@ request(requestOptions, function (error, response, body) {
     });*/
 
 
-}
+
 
 function getLatest(app,db){
 	
