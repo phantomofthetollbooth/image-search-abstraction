@@ -10,7 +10,7 @@ app.get('/latest', getLatest);
 
 
 
-var getImgur = function(req,res){
+function getImgur(req,res){
 	  var queryUrl = "https://api.imgur.com/3/gallery/search/time";
     if (req.query.offset){
       queryUrl += "/" + req.query.offset;
