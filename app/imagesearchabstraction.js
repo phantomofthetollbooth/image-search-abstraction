@@ -33,10 +33,10 @@ request(getImgur, function (error, response, body) {
   }
 })
 
-searches.insert({query: req.params.query, time: Date.now()}, function(err, result) {
+/*searches.insert({query: req.params.query, time: Date.now()}, function(err, result) {
       if (err) {throw err};
       return;
-    });
+    });*/
 
 
 }
